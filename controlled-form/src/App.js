@@ -8,7 +8,6 @@ const PasswordErrorMessage = () => {
  ); 
 }; 
 
-
 function App() { 
 
   {/*Variables that will be used for keep track of the new values. 
