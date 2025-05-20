@@ -6,7 +6,7 @@ import Specials from './components/Specials.js';
 import Testimonials from './components/Testimonials.js';
 import About from './components/About.js';
 import Footer from './components/Footer.js';
-
+import './globals.css';
 
 export default function Home() {
   return (
