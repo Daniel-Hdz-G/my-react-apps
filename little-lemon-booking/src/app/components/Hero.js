@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect} from "react";
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -17,11 +17,13 @@ const Hero = () => {
                     recipes served with a modern
                     twist.
                 </p>
-                <button className="bg-llyellow text-llgreen font-bold py-2 px-4 rounded-full hover:bg-llgreen hover:text-white">
-                    Reserve a Table
-                </button>
+                <Link to="/booking">
+                    <button className="bg-llyellow text-llgreen font-bold mt-4 py-2 px-4 rounded-full hover:bg-llgreen hover:text-white">
+                        Reserve a Table
+                    </button>
+                </Link>
             </div>
-            <img src="/assets/restauranfood.jpg" alt="Restaurant Food" className="size-90 object-cover object-center rounded-4xl mt-50"/>
+            <img src="/assets/restauranfood.jpg" alt="Restaurant Food" className="size-[30vh] object-cover object-center rounded-4xl mt-50"/>
         </section>
     );
 }
