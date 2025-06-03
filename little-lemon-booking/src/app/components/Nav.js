@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect} from "react";
+import { useState, useRef } from "react";
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,25 +16,58 @@ const Nav = () => {
     return (
         <nav
             ref={navRef}
-            className="flex flex-row items-center justify-center w-full bg-white min-h-[75]"
+            className="flex flex-row items-center justify-center w-full bg-white min-h-[75] relative"
         >
             <a href="/" className="text-2xl font-bold px-5">
                 <img src="/assets/Logo.svg" alt="Little Lemmon Logo"/>
             </a>
-            {
-            linksNav.map((item) => (
-                <a href={item.link} key={item.name} className="ml-4 p-2 text-llgreen font-[550] hover:bg-llyellow hover:rounded-full px-5">{item.name}</a>
-            ))
-            }
+            {/* Main Menu */}
+            <div className="hidden md:flex">
+                {linksNav.map((item) => (
+                    <a
+                        href={item.link}
+                        key={item.name}
+                        className="ml-4 p-2 text-llgreen font-[550] hover:bg-llyellow hover:rounded-full px-5"
+                    >
+                        {item.name}
+                    </a>
+                ))}
+            </div>
+            {/* Hamburguer Button Menu */}
+            <button
+                className="md:hidden ml-auto mr-4 p-2"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Abrir menú"
+            >
+                <span className="block w-6 h-0.5 bg-llgreen mb-1"></span>
+                <span className="block w-6 h-0.5 bg-llgreen mb-1"></span>
+                <span className="block w-6 h-0.5 bg-llgreen"></span>
+            </button>
+            {/* Mobile Menu */}
             {isOpen && (
-                <ul className="absolute bg-white shadow-lg rounded mt-2 left-1/2 transform -translate-x-1/2">
-                    <li className="p-2 hover:bg-gray-200">Item 1</li>
-                    <li className="p-2 hover:bg-gray-200">Item 2</li>
-                    <li className="p-2 hover:bg-gray-200">Item 3</li>
+                <ul className="fixed top-0 right-0 w-2/3 max-w-xs h-full bg-white shadow-lg z-50 flex flex-col pt-20 px-6 animate-slide-in">
+                    <button
+                        className="absolute top-4 right-4 text-4xl text-llgreen"
+                        onClick={() => setIsOpen(false)}
+                        aria-label="Cerrar menú"
+                    >
+                        ×
+                    </button>
+                    {linksNav.map((item) => (
+                        <li key={item.name} className="mb-6">
+                            <a
+                                href={item.link}
+                                className="block text-llgreen font-bold text-lg hover:bg-llyellow rounded-full px-4 py-2"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {item.name}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             )}
         </nav>
     );
-    }
+};
 
 export default Nav;

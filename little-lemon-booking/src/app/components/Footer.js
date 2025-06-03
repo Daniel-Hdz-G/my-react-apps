@@ -1,6 +1,4 @@
-import { useState, useRef, useEffect} from "react";
 import { FaFacebookF, FaSquareTwitter, FaSquareInstagram  } from "react-icons/fa6";
-
 
 const doormatNavigation = [
     { name: "Home", link: "/" },
@@ -19,12 +17,12 @@ const socialMediaLinks = [
 
 const Footer = () => {
     return (
-        <footer className="justify-center flex flex-row bg-llgreen text-white py-4">
+        <footer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center bg-llgreen text-white py-4">
             <div className="flex mx-20 items-center">
                 <img src="/assets/Logo.svg" className="bg-white/75 rounded-4xl p-2 hover:bg-white hover:cursor-pointer"/>
             </div>
             <div className="mx-20">
-                <span className="font-extrabold">Doormat Navigation</span>
+                <span className="font-extrabold">Navigation</span>
                 <ul className="mt-5">
                     {doormatNavigation.map((item) => (
                         <li key={item.name}>
@@ -65,4 +63,3 @@ const Footer = () => {
 }
 
 export default Footer;
-// This code defines a simple footer component using React.

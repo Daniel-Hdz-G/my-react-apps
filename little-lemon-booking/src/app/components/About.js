@@ -1,5 +1,3 @@
-import { useState, useRef, useEffect} from "react";
-
 const About = () => {
     return (
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 bg-white py-8 text-black items-center justify-center min-h-[40vh]">
@@ -10,7 +8,7 @@ const About = () => {
                     Welcome to our restaurant! We are dedicated to providing you with the best dining experience possible. Our team is passionate about food and service, and we strive to create a warm and inviting atmosphere for all our guests.
                 </p>
                 <p className="text-gray-700 mb-4">
-                    Our menu features a variety of dishes made from the freshest ingredients, sourced locally whenever possible. Whether you're here for a casual meal or a special occasion, we have something for everyone.
+                    Our menu features a variety of dishes made from the freshest ingredients, sourced locally whenever possible. Whether you&#39re here for a casual meal or a special occasion, we have something for everyone.
                 </p>
             </div>
             <div className="container mx-auto px-4 relative">

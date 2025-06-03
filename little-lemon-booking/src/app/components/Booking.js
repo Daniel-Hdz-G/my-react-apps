@@ -26,19 +26,19 @@ const Booking = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Validación simple (puedes mejorarla)
+        {/* Validating that all fields are filled*/}
         for (const key in formData) {
             if (!formData[key]) {
-                setFormError("Por favor completa todos los campos.");
+                setFormError("Please fill in all fields.");
                 return;
             }
         }
         setFormError("");
-        // Redirige y pasa los datos
+        {/* Redirecting to the booking confirmation page with form data */}
         navigate("/booking-confirmation", { state: formData });
     };
 
-    // Obtener la fecha de hoy en formato YYYY-MM-DD
+    { /* This ensures that the user cannot select a date before today */ }
     const today = new Date();
     const yyyy = today.getFullYear();
     const mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -46,9 +46,9 @@ const Booking = () => {
     const minDate = `${yyyy}-${mm}-${dd}`;
 
     return (
-        <section className="flex flex-col items-center justify-center bg-cover bg-center h-screen bg-llgreen p-8 text-black">
+        <section className="flex flex-col items-center justify-center h-screen bg-llgreen p-8 text-black bg-[url('/assets/restaurant.jpg')] bg-no-repeat bg-cover bg-center bg-blend-overlay">
             <div className="bg-llorange-light p-8 rounded-lg shadow-lg max-w-lg w-full">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="flex flex-col">
                     <label htmlFor="name" className="block font-bold mb-2">Name:</label>
                     <input
                         type="text"
@@ -118,7 +118,7 @@ const Booking = () => {
                     {formError && <p className="text-red-600 mb-2">{formError}</p>}
                     <button
                         type="submit"
-                        className="bg-llyellow text-llgreen font-bold mt-4 py-2 px-4 rounded-full hover:bg-llgreen hover:text-white"
+                        className="bg-llyellow text-llgreen font-bold mt-4 py-2 px-4 rounded-full hover:bg-llgreen hover:text-white hover:cursor-pointer transition-colors duration-300"
                     >
                         Confirm Booking
                     </button>
