@@ -1,12 +1,69 @@
-# React + Vite
+# 🍋 Little Lemon Booking System - Final Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was developed to fulfill the requirements of the Meta Front-End Professional Certificate on Coursera. It showcases proficiency in React and other front-end technologies, including JavaScript, HTML, and CSS.
 
-Currently, two official plugins are available:
+## ⚒️ Built with:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+    - useEffect
+    - useState
+    - useRef
+- React Router
+    - useLocation
+    - Link
+    - useNavigate
+- React Icons
+- Vite
+- Tailwind
 
-## Expanding the ESLint configuration
+## 🖼️ Pictures
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Little Lemon Booking Site](/src/preview/full-site.png)
+![Responsive Menu](/src/preview/responsive-menu.png)
+
+## 📝 Some Code [From BookingConfirmation.jsx]
+
+```javascript
+import { useLocation } from "react-router-dom";
+
+const BookingConfirmation = ( ) => {
+  ...
+  const bookingDetails = [
+    { label: "Name", value: name },
+    { label: "Email", value: email },
+    { label: "Date", value: date },
+    { label: "Time", value: time },
+    { label: "Number of Guests", value: guests },
+    { label: "Occasion", value: occasion },
+  ];
+
+  return (
+    <section>
+        ...
+        <h1 className="font-bold text-3xl text-center mb-4">Booking Confirmed! 🎉</h1>
+        <p>Thank you for your booking {name}!</p>
+        <p>We have received your booking details:</p>
+        <ul className="p-5">
+          {bookingDetails.map(({ label, value }) => (
+            <li key={label}>
+              <strong>{label}:</strong> {value}
+            </li>
+          ))}
+        </ul>
+        <Link to="/" className="flex items-center justify-center mt-4 font-semibold text-llgreen hover:text-llyellow">
+          <span className="mr-2">Go Back</span>
+          <IoMdArrowRoundBack />
+        </Link>
+    </section>
+  );
+}
+```
+
+## 🔗 [Live Preview ](https://little-lemon-booking-three.vercel.app/)
+
+If you find this useful, feel free to use it as a references for you site :)
+
+## 👨🏻‍💻 Author
+
+- LinkedIn - [@dahg](https://www.linkedin.com/in/dahg/)
+- Coursera - [@dahg](https://www.coursera.org/learner/dahg)
