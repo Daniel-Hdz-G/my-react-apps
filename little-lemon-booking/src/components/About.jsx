@@ -15,8 +15,8 @@ const About = () => {
                 </p>
             </div>
             <div className="container mx-auto px-4 relative">
-                <img src={RestaurantChef} alt="Chef at Little Lemon Restaurant" className="w-auto rounded-lg relative max-w-1/2 ml-[5%] top-[3vh] "/>
-                <img src={MarioAndAdrian} alt="Owners Mario and Adrian at Little Lemon" className="w-auto rounded-lg relative max-w-1/2 ml-[45%] bottom-[3vh] hover:z-2"/>
+                <img src={RestaurantChef} alt="Chef at Little Lemon Restaurant" className="w-auto rounded-lg relative max-w-1/2 ml-[5%] top-[3vh] hover:z-2"/>
+                <img src={MarioAndAdrian} alt="Owners Mario and Adrian at Little Lemon" className="w-auto rounded-lg relative max-w-1/2 ml-[45%] bottom-[3vh] "/>
             </div>
 
         </section>
@@ -24,4 +24,3 @@ const About = () => {
 }
 
 export default About;
-// This code defines a simple About component using React.

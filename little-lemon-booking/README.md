@@ -18,8 +18,12 @@ This project was developed to fulfill the requirements of the Meta Front-End Pro
 
 ## 🖼️ Pictures
 
-![Little Lemon Booking Site](/src/preview/full-site.png)
-![Responsive Menu](/src/preview/responsive-menu.png)
+### Full Website
+![Little Lemon Booking Site](./src/preview/full-site.png)
+### Mobile Menu
+<p align="center">
+  <img src="./src/preview/responsive-menu.png" alt="Responsive Menu" />
+</p>
 
 ## 📝 Some Code [From BookingConfirmation.jsx]
 
@@ -61,9 +65,13 @@ const BookingConfirmation = ( ) => {
 
 ## 🔗 [Live Preview ](https://little-lemon-booking-three.vercel.app/)
 
-If you find this useful, feel free to use it as a references for you site :)
+If you find this useful, feel free to use it as a reference for you own website :)
 
 ## 👨🏻‍💻 Author
 
 - LinkedIn - [@dahg](https://www.linkedin.com/in/dahg/)
 - Coursera - [@dahg](https://www.coursera.org/learner/dahg)
+
+
+
+♥️ _- Daniel Hernández_

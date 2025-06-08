@@ -46,4 +46,3 @@ const Testimonials = () => {
     );
 }
 export default Testimonials;
-// // This code defines a simple Testimonials component using React.
