@@ -2,8 +2,18 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
+{ /* Booking component renders a booking form with fields for name, email, date, time, guests, and occasion. */ }
 
 const Booking = () => {
+
+    { /* Booking.jsx - Component for the booking form of the Little Lemon restaurant website
+    const  formData: Object containing form fields for name, email, date, time, guests, and occasion.
+    const formError: String for displaying form validation errors.
+
+    const handleChange: Function to update form data state on input change.
+    const handleSubmit: Function to validate form data and navigate to booking confirmation page.
+*/ }
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -12,6 +22,7 @@ const Booking = () => {
         guests: "",
         occasion: ""
     });
+
     const [formError, setFormError] = useState("");
     const navigate = useNavigate();
 
@@ -38,7 +49,10 @@ const Booking = () => {
         navigate("/booking-confirmation", { state: formData });
     };
 
-    { /* This ensures that the user cannot select a date before today */ }
+{ /* Helper variables for date input
+    This sets the minimum date to today, ensuring users cannot select past dates.
+*/ }
+
     const today = new Date();
     const yyyy = today.getFullYear();
     const mm = String(today.getMonth() + 1).padStart(2, '0');

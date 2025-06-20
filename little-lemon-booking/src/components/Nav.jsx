@@ -3,6 +3,20 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
 
 const Nav = () => {
+
+    { /* Nav component renders a navigation bar with links to different sections of the Little Lemon restaurant website.
+        It includes a logo, a main menu for larger screens, and a hamburger menu for mobile screens.
+        The hamburger menu toggles the visibility of the mobile menu, which contains the same links as the main menu.
+
+        const isOpen: State variable to track whether the mobile menu is open or closed.
+        const navRef: Ref to the navigation element for potential future use (e.g., for
+        closing the menu when clicking outside of it).
+
+        const linksNav: Array of objects representing the navigation links, each with a name and a link property.
+        The linksNav array is mapped to create the navigation links in both the main menu and the
+        mobile menu.
+    */
+   }
     const [isOpen, setIsOpen] = useState(false);
     const navRef = useRef(null);
 

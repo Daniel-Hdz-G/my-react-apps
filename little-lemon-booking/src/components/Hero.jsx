@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom';
 import RestaurantFood from '../assets/restauranfood.jpg';
 
 const Hero = () => {
+
+    { /* Hero component renders a hero section with a title, subtitle, description, and a button to reserve a table.
+        It includes a background image and a restaurant food image on the right side.
+    */ }
+
     return (
         <section className="flex flex-row bg-cover bg-center min-h-[40vh] max-h-[40vh] bg-llgreen items-center justify-center w-full">
             <div id="reserve-a-table-hero" className="max-w-[30%] p-8">

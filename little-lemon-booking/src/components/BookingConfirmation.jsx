@@ -4,6 +4,15 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 
 
 const BookingConfirmation = ( ) => {
+
+  { /* BookingConfirmation component renders a confirmation page after a successful booking.
+      It displays the booking details such as name, email, date, time, number of guests
+      and occasion, and provides a link to go back to the home page.
+
+      The component uses the useLocation hook to access the state passed from the Booking component.
+      The booking details are displayed in a list format, and the page has a background image
+  */ }
+
   const location = useLocation();
   const { name, email, date, time, guests, occasion } = location.state || {};
 

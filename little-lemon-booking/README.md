@@ -13,6 +13,7 @@ This project was developed to fulfill the requirements of the Meta Front-End Pro
     - Link
     - useNavigate
 - React Icons
+- Open Graph
 - Vite
 - Tailwind
 

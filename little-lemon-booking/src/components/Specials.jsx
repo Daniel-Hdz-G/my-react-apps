@@ -3,6 +3,10 @@ import GreekSalad from "../assets/greek-salad.jpg";
 import Bruchetta from "../assets/bruchetta.svg";
 import LemonDessert from "../assets/lemon-dessert.jpg";
 
+{ /* Specials.jsx - Component for the Specials section of the Little Lemon restaurant website
+    const dishes: Array of dish objects with name, description, price, and image properties.
+*/ }
+
 const dishes = [
     {
         name: "Greek Salad",
@@ -24,8 +28,9 @@ const dishes = [
     }
 ];
 
-const Specials = () => {
-    return (
+{ /* Specials component renders a section with a title, a grid of dishes, and an order button for each dish. */ }
+
+const Specials = () => (
         <section className="bg-white py-30 min-h-[50vh] ">
             <div className="container mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-4 text-black">This Weeks Specials</h2>
@@ -52,6 +57,5 @@ const Specials = () => {
             </div>
         </section>
     );
-}
 
 export default Specials;

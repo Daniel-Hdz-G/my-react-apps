@@ -1,5 +1,12 @@
 import { FaFacebookF, FaSquareTwitter, FaSquareInstagram  } from "react-icons/fa6";
 import FooterLogo from "../assets/Logo.svg";
+
+{ /* Footer.jsx - Component for the footer section of the Little Lemon restaurant website
+
+    const doormatNavigation: Array of navigation items with name and link properties.
+    const socialMediaLinks: Array of social media links with name, link, and icon properties.
+
+*/}
 const doormatNavigation = [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
@@ -15,8 +22,9 @@ const socialMediaLinks = [
     { name: "Twitter", link: "https://www.twitter.com/LittleLemonRestaurant", icon: <FaSquareTwitter className="text-white m-1" /> },
 ];
 
-const Footer = () => {
-    return (
+{ /* Footer component renders a footer section with navigation links, contact information, and social media links. */ }
+
+const Footer = () => (
         <footer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center bg-llgreen text-white py-4">
             <div className="flex mx-20 items-center">
                 <img alt="Little Lemon Footer Logo" src={FooterLogo} className="bg-white/75 rounded-4xl p-2 hover:bg-white hover:cursor-pointer"/>
@@ -66,6 +74,6 @@ const Footer = () => {
 
         </footer>
     );
-}
+
 
 export default Footer;
